@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">
+          <a href="index.html">
+            <i class="fab fa-asymmetrik"></i>
+            AGZ
+          </a>
+        </h1>
+        <nav class="nav-bar">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="stores.html" class="active">Stores</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="main-area">
+        <main>
+          <button class="add-store-button">Add a new store</button>
+          <br> <br>
+          <div class="list-of-stores"></div>
+          <div>
+            <form class="add-store-form" action="/api/stores" method="post">
+              <h2>Add a store</h2>
+              <label>
+                Store name:
+                <input type="text" placeholder="Store name" name="name" required minlength="1" />
+              </label>
+              <label>
+                isWareHouse:
+                <input type="text" placeholder="Enter TRUE and FALSE" name="isWarehouse" minlength="1" />
+              </label>
+              <label> address Id :
+                <input type="number" placeholder="Enter address Id" name="addressId" required minlength="1" />
+              </label>
+              <input type="submit" value="Add store" />
+            </form>
+          </div>
+          <div>
+            <form class="change-store-form" action="" method="put">
+              <h2>Edit store details</h2>
+              <label>
+                Store name:
+                <input type="text" placeholder="Enter store name" name="name" required minlength="1" />
+              </label>
+              <label>
+                isWareHouse:
+                <input type="text" placeholder="Enter TRUE and FALSE" name="isWarehouse" minlength="1" />
+              </label>
+              <label> address Id :
+                <input type="number" placeholder="Enter address Id" name="addressId" required minlength="1" />
+              </label>
+              <input type="submit" value="Edit store details" />
+            </form>
+          </div>
+        </main>
+      </div>
+      <footer>
+        <p>© awesomegadgetzone.com, Inc. All rights reserved. </p>
+        <p><i class="far fa-envelope"></i> info@agz.com</p>
+        <p><i class="fas fa-phone-alt"></i> +46- 721277777</p>
+      </footer>
+      <script src="script/store.js"></script>
+  </body>
+
+</html>
