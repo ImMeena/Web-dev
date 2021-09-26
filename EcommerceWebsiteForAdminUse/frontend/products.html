@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="logo">
+          <a href="index.html">
+            <i class="fab fa-asymmetrik"></i>
+            AGZ
+          </a>
+        </h1>
+        <nav class="nav-bar">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="stores.html">Stores</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="main-area">
+        <main>
+          <button class="add-product-button">Add a new product</button>
+          <br> <br>
+          <div class="list-of-product"></div>
+          <div>
+            <form class="add-product-form" action="/api/products" method="post">
+              <h2>Add a product</h2>
+              <label>
+                Product name:
+                <input type="text" placeholder="Product name" name="productName" required minlength="1"
+                  maxlength="30" />
+              </label>
+              <label> description:
+                <input type="text" placeholder="description" name="description" required minlength="1"
+                  maxlength="300" />
+              </label>
+              <label>
+                Image address
+                <input type="text" placeholder="Enter image address" name="image">
+              </label>
+              <label>
+                Price:
+                <input type="text" placeholder="Price" name="price" required minlength="1" />
+                <input type="submit" value="Add product" />
+            </form>
+          </div>
+          <div>
+            <form class="change-product-form" action="" method="put">
+              <h2>Edit product details</h2>
+              <label>
+                Product name:
+                <input type="text" placeholder="Product name" name="productName" required minlength="1" />
+              </label>
+              <label>
+                Image address
+                <input type="text" placeholder="Enter image address" name="image">
+              </label>
+              <label> description:
+                <input type="text" placeholder="description" name="description" required minlength="1" />
+              </label>
+              <label>
+                Price:
+                <input type="text" placeholder="Price" name="price" required minlength="1" />
+                <input type="submit" value="Edit product details" />
+            </form>
+          </div>
+        </main>
+      </div>
+      <footer>
+        <p>© awesomegadgetzone.com, Inc. All rights reserved. </p>
+        <p><i class="far fa-envelope"></i> info@agz.com</p>
+        <p><i class="fas fa-phone-alt"></i> +46- 721277777</p>
+      </footer>
+      <script src="script/product.js"></script>
+  </body>
+
+</html>
